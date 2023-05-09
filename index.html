@@ -28,8 +28,8 @@
                         <span>⚠ Solo letras minusculas, sin acentos y sin caracteres especiales</span>
                     </div>
                     <div class="contenedor-botones">
-                        <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
-                        <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                        <button class="btn-encrip-desencrip-copy" onclick="btnEncriptar()"><span>Encriptar</span></button>
+                        <button class="btn-encrip-desencrip-copy" onclick="btnDesencriptar()"><span>Desencriptar</span></button>
                     </div>
                 </div>
             </section>
@@ -38,9 +38,9 @@
                 <div class="contenedor-encriptador" id="contenedor-encriptador">
                     <p class="texto-encriptado" id="texto-encriptado"></p>
                     <div class="contenedor-botones">
-                        <button class="copiar" id="btn-copiar">Copiar</button>
+                        <button class="btn-encrip-desencrip-copy" id="btn-copiar"><span>Copiar</span></button>
                     </div>
-                    <div id="mensaje-copiado" style="display: none">Texto copiado</div>
+                    <div id="mensaje-copiado" style="display: none"><br>Texto copiado</div>
                 </div>
                 <div class="contenedor-derecha" id="contenedor-derecha">
                     <div class="contenedor-img">
@@ -55,8 +55,9 @@
             </section>
         </main>
         <footer>
-            
+            <p>redes sociales</p>
         </footer>
+        
     </body>
     <script src="encriptador.js"></script>
 </html>
