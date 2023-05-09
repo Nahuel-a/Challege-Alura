@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>🔐Decodificador de texto</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <main class="main"> 
+            <div class="simbolo">
+                <img src="imagenes/Vector.png" alt="Simbolo de alura">
+            </div>
+            <section class="seccion-principal">
+                <div class="contenedor-principal">
+                    <div class="contenedor-texto">
+                        <div id="ventana-advertencia" class="hidden">
+                            <button class="cerrar-ventana" id="cerrar-ventana">x</button>
+                            <p>⚠ ADVERTENCIA!! ⚠<br><br> Acuérdese que solo se encriptan letras en minusculas y sin acentos, 
+                                tu texto se va a encriptar pero se eliminara todos los caracteres no aceptados
+                            </p>
+                        </div>
+                        <textarea id="textArea" placeholder="Ingrese el texto aqui"></textarea>
+                    </div>
+                    <div class="mensaje-alerta">
+                        <span>⚠ Solo letras minusculas, sin acentos y sin caracteres especiales</span>
+                    </div>
+                    <div class="contenedor-botones">
+                        <button class="encriptar" onclick="btnEncriptar()">Encriptar</button>
+                        <button class="desencriptar" onclick="btnDesencriptar()">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seccion-derecha">
+                <div class="contenedor-encriptador" id="contenedor-encriptador">
+                    <p class="texto-encriptado" id="texto-encriptado"></p>
+                    <div class="contenedor-botones">
+                        <button class="copiar" id="btn-copiar">Copiar</button>
+                    </div>
+                    <div id="mensaje-copiado" style="display: none">Texto copiado</div>
+                </div>
+                <div class="contenedor-derecha" id="contenedor-derecha">
+                    <div class="contenedor-img">
+                        <img src="imagenes/Muñeco.png" alt="imagen-muñeco">
+                    </div>
+                    <div class="texto_contenedor">
+                        <h2>Ningún mensaje fue encontrado</h2>
+                        <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+        <footer>
+            
+        </footer>
+    </body>
+    <script src="encriptador.js"></script>
+</html>

@@ -1,0 +1,221 @@
+.hidden{
+    display: none;
+}
+body{
+    background: #98baed7a;
+    margin: 0 auto;
+}
+.simbolo{
+    padding: 24px 0 0 16px;
+}
+.main, .seccion-principal{
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-principal{
+    height: 22em;
+    padding: 0 1em;
+    margin-top: 4.5em;
+    position: relative;
+}
+.contenedor-texto{
+    width: 100%;
+    height: 70%;
+    max-height: 100%;
+}
+.cerrar-ventana{
+   background-color: #fefefe; 
+   border-radius: 5px;
+   position: absolute;
+   top: 10px;
+   right: 10px;
+}
+.cerrar-ventana:hover{
+    background-color: rgb(255, 71, 71);
+    border-color: rgb(255, 71, 71);
+}
+#ventana-advertencia{
+    position: absolute;
+    background-color: #fefefe;
+    padding: 0.5em;
+    margin: 2em;
+    border-radius: 0.5em;
+    border: 2px solid;
+}
+  
+#ventana-advertencia p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+    color: red;
+}
+
+.contenedor-texto textarea{
+    color: black;
+    margin: 1em 0 0;
+    width: 95%;
+    height: 95%;
+    line-height: 200%;
+    font-size: 1.5em;
+    border: none;
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    
+}
+.mensaje-alerta{
+    display: flex;
+    margin: 20px;
+    font-size: 19px;
+}
+.contenedor-botones{
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+.encriptar, .desencriptar{
+    width:200px;
+    background-color: #fefefe;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border:none;
+}
+
+.encriptar:hover, .desencriptar:hover{
+    background-color: #1a73e8;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.seccion-derecha{
+    background: #fefefe;
+    margin: 1em 2em 0.7em 1em;
+    height: 27em;
+    box-shadow: 24px 24px 16px -6px rgba(0, 0, 0, 0.6);
+    border-radius: 32px;
+}
+.contenedor-encriptador{
+    display: none;
+    padding: 20px;
+    word-wrap: break-word;
+    height: 70%;
+}
+.texto-encriptado{
+    color: black;
+    max-height: 100%;
+    line-height: 150%;
+    font-size: 32px;
+    text-align: center;
+    overflow: auto;
+}
+.contenedor-derecha{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+}
+.texto_contenedor{
+    padding: 32px;
+    text-align: center;
+    font-size: 20px;
+}
+.copiar{
+    margin: auto;
+    margin-top: 3em;
+    width:200px;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border:none;
+    
+}
+.copiar:hover{
+    background-color: rgb(78, 244, 92);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media screen and (min-width:790px){
+    .main{
+        flex-direction: row;
+        height: 100vh;
+        justify-content: space-between;
+    }
+    .simbolo{
+        display: flex;
+        justify-content: center;
+        height: 48px;
+        width: 120px;
+        margin: 40px 0 0 40px;
+        padding: 0;
+    }
+    .seccion-principal{
+        width: 50%;
+    }
+    .contenedor-principal{
+        height: 40%;
+    }
+    .contenedor-texto{
+        padding-left: 5%;
+        padding-top: 6em;
+        height: 90%;
+    }
+    .mensaje-alerta{
+        padding-left: 6%;
+    }
+    .contenedor-botones button{
+        width: 300px;
+    }
+    .seccion-derecha{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 26%;
+        height: 70%;
+    }
+    .contenedor-encriptador{
+        height: 70%;
+    }
+    .contenedor-img img{
+        display: block;
+        width: 80%;
+        height: 70%;
+    }
+    .text_contenedor{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 50px 0 50px;
+    }
+
+}
+@media screen and (min-width:600px){
+    .contenedor-botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .contenedor-img{
+        display: flex;
+        justify-content: center;
+    }
+    .contenedor-img img{
+        display: block;
+
+    }
+}
+@media screen and (max-width: 600px) {
+    .contenedor-img img {
+      display: none;
+    }
+    .contenedor-texto {
+        width: 90%;
+        height: 60%;
+    }
+      
+    .contenedor-texto textarea {
+        font-size: 1.5em;
+    }
+}
