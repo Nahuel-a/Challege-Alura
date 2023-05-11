@@ -8,9 +8,6 @@ body{
 .simbolo{
     padding: 24px 0 0 16px;
 }
-.main{
-    height: 95vh;
-}
 .main, .seccion-principal{
     display: flex;
     flex-direction: column;
