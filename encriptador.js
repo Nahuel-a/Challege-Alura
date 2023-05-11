@@ -9,13 +9,7 @@ const ventadaAvertencia = document.getElementById("ventana-advertencia");
 const btnCerrar = document.getElementById("cerrar-ventana");
 
 btnCopiar.addEventListener("click", function(){
-    const seleccion = window.getSelection();
-    const rango = document.createRange();
-
-    rango.selectNodeContents(areaTextoEncriptado);
-    seleccion.removeAllRanges();
-    seleccion.addRange(rango);
-    document.execCommand("copy");
+    navigator.clipboard.writeText(areaTextoEncriptado.innerText);
 
     mensajeCopiado.style.display = "block";
     setTimeout(function(){
@@ -24,6 +18,7 @@ btnCopiar.addEventListener("click", function(){
     
     textArea.value="";
 });
+
 
 textArea.addEventListener("input", function(){
     if(this.value === ""){
