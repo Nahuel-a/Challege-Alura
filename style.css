@@ -2,11 +2,17 @@
     display: none;
 }
 body{
-    background: #98baed7a;
+    background-image: linear-gradient(rgb(127 255 212 / 46%), rgb(26 115 232 / 53%));
     margin: 0 auto;
 }
 .simbolo{
-    padding: 24px 0 0 16px;
+    display: flex;
+    margin: 24px 0 0 16px;
+}
+.simbolo h1{
+    display: flex;
+    margin: 10px;
+    font-size: 20px;
 }
 .main, .seccion-principal{
     display: flex;
@@ -26,28 +32,28 @@ body{
 .cerrar-ventana{
    background-color: #fefefe; 
    border-radius: 5px;
+   border: 1px solid;
    position: absolute;
    top: 10px;
    right: 10px;
 }
 .cerrar-ventana:hover{
-    background-color: rgb(255, 71, 71);
-    border-color: rgb(255, 71, 71);
+    background-color: red;
+    border: 1px solid;
 }
 #ventana-advertencia{
     position: absolute;
-    background-color: #fefefe;
+    background-color: rgb(252 36 36);
     padding: 0.5em;
     margin: 2em;
     border-radius: 0.5em;
-    border: 2px solid;
+    border: 1px solid;
 }
   
 #ventana-advertencia p {
     margin: 0;
     font-size: 18px;
     text-align: center;
-    color: red;
 }
 
 .contenedor-texto textarea{
@@ -76,7 +82,7 @@ body{
 
 .btn-encrip-desencrip-copy{
     width:200px;
-    background-color: #fefefe;
+    background-color: #c2ffeb;
     border-radius: 15px;
     padding: 10px 24px;
     font-size: 16px;
@@ -105,12 +111,12 @@ body{
     right: 0;
 }
 .btn-encrip-desencrip-copy:hover, #btn-copiar:hover{
-    background-color: #1a73e8;
+    background-color: rgb(26 115 232 / 70%);
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .seccion-derecha{
-    background: #fefefe;
+    background-image: linear-gradient(rgb(26 115 232 / 53%),rgb(127 255 212 / 46%));
     margin: 1em 2em 0.7em 1em;
     height: 27em;
     box-shadow: 24px 24px 16px -6px rgba(0, 0, 0, 0.6);
@@ -139,10 +145,10 @@ body{
 .texto_contenedor{
     padding: 1.2em;
     text-align: center;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 #btn-copiar{
-    background-color:rgb(205 221 246);
+    background-color:#c2ffeb;
     margin: 3em auto 0;
     width:200px;
     border-radius: 20px;
@@ -172,16 +178,18 @@ footer img:hover{
 @media screen and (min-width:790px){
     .main{
         flex-direction: row;
-        height: 90vh;
-        justify-content: space-between;
+        height: 86vh;
+        justify-content: center;
     }
     .simbolo{
         display: flex;
-        justify-content: center;
-        height: 48px;
-        width: 120px;
         margin: 40px 0 0 40px;
         padding: 0;
+    }
+    .simbolo h1{
+        display: flex;
+        margin: 10px;
+        font-size: 25px;
     }
     .seccion-principal{
         width: 50%;
