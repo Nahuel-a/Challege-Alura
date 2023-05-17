@@ -41,7 +41,7 @@ body{
     background-color: red;
     border: 1px solid;
 }
-#ventana-advertencia{
+#ventana-advertencia1{
     position: absolute;
     background-color: rgb(252 36 36);
     padding: 0.5em;
@@ -50,7 +50,22 @@ body{
     border: 1px solid;
 }
   
-#ventana-advertencia p {
+#ventana-advertencia1 p {
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+
+#ventana-advertencia2{
+    position: absolute;
+    background-color: rgb(252 36 36);
+    padding: 0.5em;
+    margin: 2em;
+    border-radius: 0.5em;
+    border: 1px solid;
+}
+  
+#ventana-advertencia2 p {
     margin: 0;
     font-size: 18px;
     text-align: center;
@@ -212,7 +227,7 @@ footer img:hover{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 26%;
+        width: 20%;
         height: 70%;
     }
     .contenedor-encriptador{
