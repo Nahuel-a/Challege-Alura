@@ -9,14 +9,15 @@ const btnCerrar = document.getElementById("cerrar-ventana");
 const ventanaAdvertencia2 = document.getElementById("ventana-advertencia2");
 const caracteresEspeciales = /[^a-zA-ZñÑáéíóúÁÉÍÓÚüÜ\s]/g;
 
+//Copia el texto al portapapeles mediante un evento click
 btnCopiar.addEventListener("click", () => {
     navigator.clipboard.writeText(areaTextoEncriptado.innerText);
-
     mensajeCopiado.style.display = "block";
     setTimeout(() => mensajeCopiado.style.display = "none", 1000);
     entradaTexto.value="";
 });
 
+//Muestra la imagen siempre y cuando la entrada de texto este vacia
 entradaTexto.addEventListener("input", function() {
     if(this.value === ""){
         areaTextoEncriptado.innerText = "";
@@ -47,6 +48,7 @@ async function btnDesencriptar(){
     }
 }
 
+//Función para encriptar el texto
 function encriptarTexto(textoEncriptado){
     return textoEncriptado.replace(/e/gi, "enter")
         .replace(/i/gi,"imes" )
@@ -55,6 +57,7 @@ function encriptarTexto(textoEncriptado){
         .replace(/u/gi, "ufat"); 
 }
 
+//Función para desencriptar el texto
 function desencriptarTexto(textoDesencriptado){
     return textoDesencriptado.replace(/enter/gi, "e")
         .replace(/imes/gi,"i" )
@@ -63,23 +66,29 @@ function desencriptarTexto(textoDesencriptado){
         .replace(/ufat/gi, "u");
 }
 
+//Función para validar el texto antes de encriptarlo o desencriptarlo
 async function validarTexto(encripDesencrip){    
+    //convierte el texto en minisculas
     encripDesencrip = encripDesencrip.toLowerCase();
     
+    //Si el texto esta vacío, rechaza la promesa
     if (encripDesencrip === ""){
         return Promise.reject();
     }
 
+    //Si el texto contiene caracteres especiales, muestra ventana de advertencia y espera a que se cierre
     if(caracteresEspeciales.test(encripDesencrip)){
         ventanaAdvertencia1.classList.remove("hidden");
 
         return new Promise((resolve) => {
             btnCerrar.addEventListener("click", () => {
                 ventanaAdvertencia1.classList.add("hidden");
+                //Remplaza los caracteres especiales por una cadena vacía
                 resolve(encripDesencrip.normalize("NFD").replace(caracteresEspeciales,''));
             });
         });
     }
+    //Si el texto es válido, resuelve la promesa
     return Promise.resolve(encripDesencrip);
 }
 
